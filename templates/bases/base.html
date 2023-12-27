@@ -1,0 +1,62 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- settings: Stylization Patterns -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/dc37c7fe1c.js" crossorigin="anonymous"></script>
+
+    <!-- STYLE OF PAGE BASE -->
+    <link href="{% static 'main_static/styles/base.css' %}" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    
+    <!-- SETTINGS OF PAGES -->
+    {% block 'head' %}{% endblock %}
+
+    <!-- PAGE TITLE -->
+    <title>{% block 'title' %}{% endblock %}</title>
+  </head>
+  <body>
+
+    <header>
+        <!-- faz o header aqui -->
+
+      <div class="header-logo">
+        <div class="img-logo-menor d-sm-none">
+          <img src="{% static 'main_static/images/logo-morse.jpg' %}" alt="">
+        </div>
+        <div id="carrosel-automático" class="carousel slide d-none d-sm-block" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'main_static/images/logo-morse.jpg' %}" class="d-block img-fluid" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'main_static/images/logo-codigo.jpg' %}"class="img-fluid " alt="logo-morse">
+            </div>
+          </div>
+          </div>
+        </div>
+      </div> 
+      <div class="header-opcoes">
+          <a href="">Login</a>
+          <a href="">Cadastro</a>
+        </div>
+    </header>
+    
+    {% block 'body' %}
+        <!-- Faz o body aqui -->
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    {% block 'acripts' %}
+    <script src=""></script>
+    {% endblock %}
+  </body>
+</html>

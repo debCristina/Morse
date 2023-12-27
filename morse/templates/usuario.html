@@ -1,0 +1,30 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+
+
+{% block 'head' %}
+    <link href="{% static 'main_static/styles/usuario.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+
+<title>{% block 'title' %}Usuario{% endblock %}</title>
+
+{% block 'body' %}
+    <main>
+        <h2>USUARIO: {{ user }}</h2>
+        {%if user == "thiago" %}
+            <h1>BOAS VINDAS</h1>
+        {% else %}
+            <h1>feia</h1>
+        {% endif %}
+        <img src="{% static 'main_static/images/homepage.png' %}" alt="">
+    </main>
+{% endblock %}
+
+
+
+{% block 'acripts' %}
+    
+{% endblock %}
+</html>

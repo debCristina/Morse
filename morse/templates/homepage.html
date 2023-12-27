@@ -1,0 +1,56 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+
+
+{% block 'head' %}
+    <link href="{% static 'main_static/styles/homepage.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+
+<title>{% block 'title' %}MORSE FORGE{% endblock %}</title>
+
+{% block 'body' %}
+    <main>
+        <section class="secao1-main">        
+        </section>
+        <section class="secao2-main">
+            <div class="detalhes">
+            </div>
+            <div class="pesquisa">
+                <div class="texto-pesquisa">
+                    <h1>
+                        Traduzindo o mundo ponto a ponto, traço a traço
+                    </h1>
+                </div>
+                <div class="container-pesquisar">
+                    <input type="text" class="barra-pesquisa"  placeholder="Escreva o que deseja codificar...">
+                    <button class="botao-pesquisar">Codificar</button>
+                </div>
+                <div class="texto-morse">
+                    <h2>
+                        - .-. .- -.. ..- --.. .. -. -.. --- / --- / -- ..- -. -.. --- / .--. --- -. - --- / .- / .--. --- -. - --- --..-- / - .-. .- --- / .- / - .-. .- --- .-.-.-
+                    </h2>
+                </div>
+                <div class="botao-container">
+                    <a href="#"> <i class="fa-regular fa-file"></i> Importe um arquivo</a>
+                </div>
+            </div>
+            <div class="detalhes">
+            </div>
+        </section>
+        <section>
+            <div></div>
+        </section>
+        <section>
+            <div></div>
+        </section>
+    </main>
+{% endblock %}
+
+
+
+{% block 'acripts' %}
+    
+{% endblock %}
+</html>
