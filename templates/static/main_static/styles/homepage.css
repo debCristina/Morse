@@ -171,12 +171,14 @@ main{
     
     .container-pesquisar{
         display: block;
+        border: none;
         border-radius: none;
         overflow: hidden;
-        border-radius: none;
-        width: 70%;
+        width: 90%;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+
     }
     
     .barra-pesquisa{

@@ -24,8 +24,9 @@
                     </h1>
                 </div>
                 <div class="container-pesquisar">
-                    <input type="text" class="barra-pesquisa"  placeholder="Escreva o que deseja codificar...">
-                    <button class="botao-pesquisar">Codificar</button>
+                    {% csrf_token %}
+                    <input type="text" class="barra-pesquisa"  placeholder="Escreva o que deseja codificar..." id="text_code" name="text_code" >
+                    <button class="botao-pesquisar" onclick="tranlated_text_code()">Codificar</button>
                 </div>
                 <div class="texto-morse">
                     <h2>
@@ -51,6 +52,6 @@
 
 
 {% block 'acripts' %}
-    
+    <script src="{% static 'main_static/scripts/main.js' %}"></script>
 {% endblock %}
 </html>

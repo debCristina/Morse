@@ -10,3 +10,14 @@ class Usuario(models.Model):
     
     def __str__(self) -> str:
         return self.name
+
+
+
+class MorseAudioPath(models.Model):
+    name = models.CharField(max_length=50)
+    subname =  models.CharField(max_length=50)
+    text_code = models.CharField(max_length=50)
+    audio_path = models.FileField(upload_to='audio_morse_code', null=True, blank=True)
+
+    def __str__(self) -> str:
+        return self.name
