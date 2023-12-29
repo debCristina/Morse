@@ -21,3 +21,11 @@ class MorseAudioPath(models.Model):
 
     def __str__(self) -> str:
         return self.name
+    
+
+class AudioCode(models.Model):
+    name = models.CharField(max_length=50)
+    file = models.FileField(upload_to='audio_file_user', null=True, blank=True)
+
+    def __str__(self) -> str:
+        return self.name

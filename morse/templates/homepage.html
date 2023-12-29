@@ -25,7 +25,7 @@
                 </div>
                 <div class="container-pesquisar">
                     {% csrf_token %}
-                    <input type="text" class="barra-pesquisa"  placeholder="Escreva o que deseja codificar..." id="text_code" name="text_code" >
+                    <input type="text" autocomplete="off" class="barra-pesquisa"  placeholder="Escreva o que deseja codificar..." id="text_code" name="text_code" >
                     <button class="botao-pesquisar" onclick="tranlated_text_code()">Codificar</button>
                 </div>
                 <div class="texto-morse">
@@ -33,13 +33,42 @@
                         - .-. .- -.. ..- --.. .. -. -.. --- / --- / -- ..- -. -.. --- / .--. --- -. - --- / .- / .--. --- -. - --- --..-- / - .-. .- --- / .- / - .-. .- --- .-.-.-
                     </h2>
                 </div>
-                <div class="botao-container">
+                <div class="botao-container" onclick="translatedFile()">
                     <a href="#"> <i class="fa-regular fa-file"></i> Importe um arquivo</a>
+                </div>
+
+                <div class="container_text_result" id="container_text_result">
+                    <div class="container_textarea_result">
+                        <label for="text_result">
+                            <textarea name="text_result" id="text_result" cols="30" rows="5"></textarea>
+                        </label>
+                    </div>
+                    <div class="container_buttons">
+                        <div class="content-buttons">
+                            <button id="btnIniciarReproducao">Iniciar Reprodução</button>
+                            <button id="btnPausarReproducao">Pausar Reprodução</button>
+                            <button>Inport um arquivo</button>
+
+                        </div>
+                        <div class="content-buttons">
+                            <button>Baixar aúdio</button>
+                            <button>Copiar código</button>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="detalhes">
             </div>
         </section>
+
+
+        <section class="container_full_page" id="container_full_page">
+            <span class="loader" id="loader"></span>
+        </section>
+
+
+
         <section>
             <div></div>
         </section>
@@ -52,6 +81,6 @@
 
 
 {% block 'acripts' %}
-    <script src="{% static 'main_static/scripts/main.js' %}"></script>
+    <script src="{% static 'main_static/scripts/main2.js' %}"></script>
 {% endblock %}
 </html>

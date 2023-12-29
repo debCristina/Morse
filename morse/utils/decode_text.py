@@ -9,8 +9,10 @@ class TextDecoder():
 
             list_text = self.translate_text_to_code()
             list_sounds = self.translate_text_to_audio()
+
+          
             
-            return {'list_text': list_text, 'list_files': list_sounds}
+            return {'code': ' '.join(map(str, list_text)), 'list_files': list_sounds}
 
         except Exception as e:
             return {'error': str(e), 'status': 500}
