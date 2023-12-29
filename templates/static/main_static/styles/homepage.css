@@ -10,8 +10,7 @@
 
 
 main{
-    background-color: blue;
-    height: 600px;
+    height: 100%;
     width: 100%;
 }
 
@@ -25,13 +24,14 @@ main{
 }
 
 .secao2-main{
-    height: 500px;
+    height: 50vh;
     width: 100%;
     background-color: #1E1E1E;
     text-align: center;
     justify-content: center;
     display: flex;
 }
+
 
 .detalhes{
     background-image:url('../images/detalhes.png');
@@ -60,13 +60,13 @@ main{
     color: #FFFFFF;
     font-size: 20px;
     font-family: Poppins;
-    font-weight: bold;
+    font-weight: 600;
 
 }
 
 .container-pesquisar{
     display: flex;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 4px;
     overflow: hidden;
     border-radius: 20px;
@@ -77,10 +77,11 @@ main{
 
 .barra-pesquisa{
     width: 100%;
-    padding: 8px;
+    padding: 8px 0 8px 15px;
     border: none;
     outline: none;
     object-fit: cover;
+    font-weight: 500;
 }
 
 .botao-pesquisar{
@@ -88,12 +89,12 @@ main{
     background-color: #DD952D;
     font-family: Poppins;
     font-weight: bold;
-    color: black;
+    color: #1E1E1E;
     border: none;
     cursor: pointer;
     outline: none;
     border-radius: 0 20px 20px 0;
-    transition: background-color 0.3s;
+    transition: 0.3s all ease-out;
 }
 
 .botao-pesquisar:hover{
@@ -105,10 +106,12 @@ main{
     text-decoration: none;
     background-color: #DD952D; 
     color: #fff; 
-    border: 1px solid #ccc; 
+    /* border: 1px solid #ccc;  */
     border-radius: 15px; 
     padding: 10px 15px; 
     text-align: center;
+    cursor: pointer;
+    transition: 0.3s all ease-out;
 }
 
 .botao-container i {
@@ -121,7 +124,7 @@ main{
     font-size: 15px; 
     font-family: Poppins;
     font-weight: bold;
-    color: black; 
+    color: #1E1E1E; 
     text-decoration: none;
 }
 
@@ -143,7 +146,80 @@ main{
     background-color: #EAC049; 
 }
 
+.container_text_result{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_full_page{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    background-color: #1E1E1E;
+    opacity: 50%;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+
+    width: 100px;
+    height: 100px;
+    border: 15px dotted #FFF;
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 5px dotted #FF3D00;
+    border-style: solid solid dotted;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    animation: rotationBack 1s linear infinite;
+    transform-origin: center center;
+  }
+      
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  } 
+
+
 @media  screen and (max-width: 768px) {
+    main{
+        height: 100vh;
+        background-color: red;
+    }
     .detalhes{
         display: none;
     } 
